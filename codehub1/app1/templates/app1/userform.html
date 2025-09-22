@@ -1,0 +1,16 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+<form action=""  method='POST' >
+    {% csrf_token %}
+    <div>
+        <label for="">Input1</label>
+        <input type="number" name="num1" value="{{ n1 }}" class="form-control">
+    </div>
+    <div>
+        <label for="">Input2</label>
+        <input type="number" name="num2" value="{{ n2 }}"  class="form-control">
+    </div>
+    <button type="submit" value="submit" class="pt-4">Save</button>
+    <input type="text" name="res" value="{{ n3 }}">
+</form> 
+{% endblock %}

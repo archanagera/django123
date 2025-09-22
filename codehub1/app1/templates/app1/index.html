@@ -1,0 +1,21 @@
+{% extends 'app1/base.html' %}
+{% block h1 %}
+first inheritance 
+{% endblock %}
+{% block content %}
+<ul>
+    {% for item in item_list %}
+    <div class="row"> 
+            <div class="col-md-4 offset-md-2">
+               <img class="card" height="150px" width="100px" src="{{ item.image }}" alt="No Found"/>
+            </div>
+            <div class="col-md-3">
+                {{ item.name }}
+            </div>
+            <div class="col-md-3">
+                <a href="{% url 'app1:detail' item.id %}" class="btn btn-success">Details</a>
+            </div>
+        </div>
+    {% endfor %}
+</ul>
+{% endblock %}

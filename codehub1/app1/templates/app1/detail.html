@@ -1,0 +1,7 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+<h1>{{ it.name }}</h1>
+<h2>{{ it.price }}</h2>
+<h3>{{ it.desc }}</h3>
+<a href="{% url 'app1:updateItem' it.id %}"> </a>
+{% endblock %}
